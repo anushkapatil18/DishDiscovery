@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DishDiscovery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Kanit', sans-serif;
+            background-image: url('https://www.insidehook.com/wp-content/uploads/2021/12/Maydan.png?w=1500&resize=1500%2C1000');
+            background-size: cover;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            padding-top: 20px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: black;
+        }
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        background-color: rgba(255, 255, 255, 0.562);
+        padding: 20px;
+        border-radius: 10px;
+        animation: fade-in 1s;
+    }
+
+    @keyframes fade-in {
+        0% {
+            opacity: 0;
+            transform: translateY(-20px);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .form-group label {
+        font-weight: bold;
+        transition: all 0.3s;
+        color: black;
+        font-size: 18px;
+    }
+
+    .form-group input {
+        transition: all 0.3s;
+        background-color: rgba(255, 255, 255, 0.486);
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        color: #333;
+        font-size: 16px;
+    }
+
+    .form-group input:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    .btn-primary {
+        width: 100%;
+        transition: all 0.3s;
+        background-color: #007bff9d;
+        border-color: #007bff;
+    }
+
+    .btn-primary:hover {
+        background-color: #0056b3;
+        border-color: #0056b3;
+    }
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center mb-4">Recipe Recommendation</h1>
+        <form action="/recommend" method="POST">
+            <!--<div class="form-group">
+                <label for="user_id">User ID:</label>
+                <input type="number" class="form-control" id="user_id" name="user_id" required>
+            </div>-->
+            <div class="form-group">
+                <label for="ingredients">Ingredients:</label>
+                <input type="text" class="form-control" id="ingredients" name="ingredients" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Recommend Recipes</button>
+        </form>
+    </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+
